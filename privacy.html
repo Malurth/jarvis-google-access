@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>Privacy Policy · JARVIS</title>
+  <meta name="description" content="How the personal-use JARVIS Google connection handles Gmail and Google Calendar data.">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body.privacy-page { background:#090d16; color:#e8edf6; font: 16px/1.7 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+    .privacy-shell { width:min(760px,calc(100% - 2.5rem)); margin:0 auto; padding:clamp(3rem,8vw,7rem) 0 6rem; }
+    .privacy-shell a { color:#a9e7ff; text-underline-offset:3px; }
+    .privacy-shell .eyebrow { color:#9adfea; text-transform:uppercase; letter-spacing:.18em; font-size:.75rem; font-weight:700; }
+    .privacy-shell h1 { font-size:clamp(2.4rem,7vw,4.5rem); line-height:1.04; letter-spacing:-.045em; margin:.7rem 0 1.4rem; }
+    .privacy-shell h2 { font-size:1.28rem; margin:2.5rem 0 .5rem; }
+    .privacy-shell p,.privacy-shell li { color:#c5d0df; }
+    .privacy-shell ul { padding-left:1.35rem; }
+    .privacy-shell .notice { border:1px solid #40556a; border-radius:16px; padding:1rem 1.25rem; background:#132134; }
+    .privacy-shell .meta { color:#8fa2b7; font-size:.9rem; }
+    .privacy-shell footer { border-top:1px solid #314052; margin-top:3.5rem; padding-top:1.25rem; }
+  </style>
+</head>
+<body class="privacy-page">
+  <main class="privacy-shell">
+    <p class="eyebrow">JARVIS · Privacy</p>
+    <h1>Privacy Policy</h1>
+    <p class="meta">Last updated September 23, 2026</p>
+    <p class="notice"><strong>In plain English:</strong> JARVIS is a personal assistant connection for its owner, not a public email service. It asks for read-only Gmail and Google Calendar access to answer requests and run owner-approved checks. This static website does not display email, calendar entries, or OAuth tokens.</p>
+
+    <h2>What the connection can access</h2>
+    <p>With the account owner's Google consent, the connection requests only <code>gmail.readonly</code> and <code>calendar.readonly</code>, plus basic account identity needed to select the right account. These scopes can read Gmail messages and labels and Google Calendar calendars and events. They do not authorize sending, deleting, or modifying messages or events. The owner's current automated access-health checks read only Gmail INBOX label metadata and the Calendar list.</p>
+
+    <h2>Why and how data is used</h2>
+    <p>The owner uses JARVIS to review requested mail or calendar information, answer questions, and support owner-approved reminders or briefings. The connection retrieves only data needed for the requested or configured task. Relevant data may be processed by the owner's OpenClaw assistant and its configured AI model provider to produce the response. It is not sold, used for advertising, or made public by this website.</p>
+
+    <h2>Storage and retention</h2>
+    <p>OAuth credentials are stored on the owner's own machine in an encrypted local keyring. Depending on the task, Google-derived information may appear in the owner's private assistant conversation history, local records, and encrypted backups under the owner's configuration. There is no public mailbox or calendar database on this site. Local records remain until removed under the owner's retention and deletion practices; this policy does not promise a fixed deletion period.</p>
+
+    <h2>Sharing and site hosting</h2>
+    <p>Data is transmitted to Google to authenticate and retrieve requested information, and relevant excerpts may be sent to the assistant's configured AI provider when processing an owner request. No Google user data is sold or shared with advertisers. The static hosting provider may collect ordinary site-access information, such as IP addresses, for security and service operation; this site contains no app analytics or advertising trackers.</p>
+
+    <h2>Control, revocation, and questions</h2>
+    <p>The account owner can revoke access from <a href="https://myaccount.google.com/connections" target="_blank" rel="noopener noreferrer">Google Account connections</a> and can remove the local credentials and private records. For questions or deletion requests, see the owner’s <a href="https://github.com/Malurth">GitHub profile</a> for contact options. Do not post private email, calendar information, or credentials publicly.</p>
+
+    <footer><a href="./">← Back to the extraordinarily necessary homepage</a></footer>
+  </main>
+</body>
+</html>
