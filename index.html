@@ -6,8 +6,8 @@
   <meta name="theme-color" content="#111714">
   <meta name="description" content="JARVIS is Sarah’s personal OpenClaw assistant. This page explains its read-only Gmail and Google Calendar access, with a perhaps excessive amount of ceremony.">
   <title>JARVIS — A very serious webpage for a very small mission</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="styles.css?v=orbital-2">
+  <script src="script.js?v=orbital-2" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -37,19 +37,34 @@
             <a class="text-link" href="privacy.html">Read the privacy policy <span aria-hidden="true">↗</span></a>
           </div>
         </div>
-        <div class="hero-art" aria-label="Decorative illustration of a tiny email inside an elaborate control system" role="img">
+        <section class="hero-art orbital-lab" aria-label="Interactive orbital illustration" aria-describedby="orbital-help">
           <div class="art-corner art-corner-tl" aria-hidden="true"></div><div class="art-corner art-corner-br" aria-hidden="true"></div>
-          <div class="art-meta art-meta-top" aria-hidden="true">JARVIS / PERSONAL OPERATIONS DIVISION <span>◉ SYSTEM NOMINAL</span></div>
-          <div class="orbit orbit-one" aria-hidden="true"></div><div class="orbit orbit-two" aria-hidden="true"></div><div class="orbit orbit-three" aria-hidden="true"></div>
-          <div class="orbit-dot orbit-dot-one" aria-hidden="true"></div><div class="orbit-dot orbit-dot-two" aria-hidden="true"></div>
-          <div class="core" aria-hidden="true">
-            <div class="core-inner"><svg viewBox="0 0 96 96" fill="none" aria-hidden="true"><rect x="12" y="24" width="72" height="49" rx="4" stroke="currentColor" stroke-width="3"/><path d="m14 28 34 26 34-26" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <span class="core-label">ONE (1) INBOX</span>
+          <div class="art-meta art-meta-top"><span>JARVIS / ORBITAL OPERATIONS</span><button class="motion-toggle" type="button" aria-pressed="false">Pause motion Ⅱ</button></div>
+          <div class="star-field" aria-hidden="true"></div>
+          <div class="orbital-scene">
+            <div class="radar-sweep" aria-hidden="true"></div>
+            <svg class="orbital-rings" viewBox="0 0 600 600" fill="none" aria-hidden="true">
+              <circle class="outer-reticle" cx="300" cy="300" r="274"/>
+              <circle class="inner-reticle" cx="300" cy="300" r="100"/>
+              <g class="orbital-path" transform="rotate(-28 300 300)"><ellipse cx="300" cy="300" rx="238" ry="145"/><ellipse class="orbit-trace" cx="300" cy="300" rx="238" ry="145"/></g>
+              <g class="orbital-path path-orange" transform="rotate(42 300 300)"><ellipse cx="300" cy="300" rx="222" ry="127"/><ellipse class="orbit-trace" cx="300" cy="300" rx="222" ry="127"/></g>
+              <g class="orbital-path path-faint" transform="rotate(100 300 300)"><ellipse cx="300" cy="300" rx="190" ry="119"/></g>
+              <path class="reticle-ticks" d="M300 14v14M300 572v14M14 300h14M572 300h14M96 96l10 10M494 494l10 10M96 504l10-10M494 106l10-10"/>
+            </svg>
+            <div class="orbital-particles" aria-hidden="true"></div>
+            <div class="signal-wave" aria-hidden="true"></div>
+            <button class="reactor" type="button" aria-label="Pulse the inbox reactor" aria-describedby="orbital-help">
+              <span class="reactor-halo" aria-hidden="true"></span>
+              <svg viewBox="0 0 96 96" fill="none" aria-hidden="true"><rect x="12" y="24" width="72" height="49" rx="4" stroke="currentColor" stroke-width="3"/><path d="m14 28 34 26 34-26" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>ONE (1) INBOX</span>
+            </button>
+            <button class="satellite satellite-mail" data-orbit="0" type="button" aria-label="Inspect Gmail satellite"><span class="satellite-icon" aria-hidden="true">✉</span><span class="satellite-tag">01 / MAIL</span></button>
+            <button class="satellite satellite-calendar" data-orbit="1" type="button" aria-label="Inspect Calendar satellite"><span class="satellite-icon" aria-hidden="true">▦</span><span class="satellite-tag">02 / CALENDAR</span></button>
+            <button class="satellite satellite-shield" data-orbit="2" type="button" aria-label="Inspect permissions satellite"><span class="satellite-icon" aria-hidden="true">⌾</span><span class="satellite-tag">03 / PERMISSIONS</span></button>
           </div>
-          <div class="art-callout art-callout-left" aria-hidden="true"><span class="callout-number">01 /</span> inbox intelligence<br><strong>READ ONLY</strong></div>
-          <div class="art-callout art-callout-right" aria-hidden="true"><span class="callout-number">02 /</span> calendar awareness<br><strong>ALSO READ ONLY</strong></div>
-          <div class="art-meta art-meta-bottom" aria-hidden="true"><span>COMPLEXITY: UNNECESSARY</span><span>INTENTIONS: GOOD</span></div>
-        </div>
+          <div class="orbital-readout"><div class="readout-heading"><span class="live-dot" aria-hidden="true"></span><span id="orbital-title">A VERY SMALL SOLAR SYSTEM</span><span class="readout-index" aria-hidden="true">SYS / 001</span></div><p id="orbital-description">One inbox. Three satellites. Entirely too much infrastructure.</p><p class="orbital-help" id="orbital-help">Hover or tap a satellite to inspect. Tap the inbox to send a pulse.</p><span class="orbital-announcement" role="status" aria-live="polite"></span></div>
+          <div class="art-meta art-meta-bottom" aria-hidden="true"><span>SIMULATION ONLY / NO GOOGLE CONNECTION</span><span>✳ READ ONLY</span></div>
+        </section>
         <div class="hero-bottomline"><span>SCROLL TO REVIEW THE EXTREMELY MODEST CAPABILITIES</span><span aria-hidden="true">↓</span></div>
       </section>
 
