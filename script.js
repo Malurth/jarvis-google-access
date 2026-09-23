@@ -76,16 +76,14 @@
       frame = requestAnimationFrame(tick);
     }
     function syncMotion() {
-      const hold = hovered || focused;
       const stopped = paused || motionPreference.matches || !visible || document.hidden;
       lab.classList.toggle('is-paused', stopped);
-      lab.classList.toggle('is-held', hold);
       toggle.textContent = motionPreference.matches ? 'Reduced motion ✓' : paused ? 'Resume motion ▶' : 'Pause motion Ⅱ';
       toggle.setAttribute('aria-pressed', String(paused || motionPreference.matches));
       toggle.disabled = motionPreference.matches;
       cancelAnimationFrame(frame);
       previous = 0;
-      if (!stopped && !hold) frame = requestAnimationFrame(tick);
+      if (!stopped) frame = requestAnimationFrame(tick);
     }
     function inspect(i, speak = false) {
       title.textContent = details[i][0];
@@ -96,11 +94,11 @@
     satellites.forEach((satellite, i) => {
       satellite.addEventListener('pointerenter', event => {
         if (event.pointerType === 'touch') return;
-        hovered = true; inspect(i); syncMotion();
+        hovered = true; inspect(i);
       });
-      satellite.addEventListener('pointerleave', () => { hovered = false; syncMotion(); });
-      satellite.addEventListener('focus', () => { focused = true; inspect(i, true); syncMotion(); });
-      satellite.addEventListener('blur', () => { focused = false; syncMotion(); });
+      satellite.addEventListener('pointerleave', () => { hovered = false; });
+      satellite.addEventListener('focus', () => { focused = true; inspect(i, true); });
+      satellite.addEventListener('blur', () => { focused = false; });
       satellite.addEventListener('click', () => inspect(i, true));
     });
     toggle.addEventListener('click', () => { paused = !paused; syncMotion(); });
